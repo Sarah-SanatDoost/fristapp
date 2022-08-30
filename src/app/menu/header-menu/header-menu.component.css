@@ -1,0 +1,29 @@
+.header-menu {
+    background-color: #1E90FF;
+    height: 40px;
+    text-align: right;
+}
+
+.header-menu ul a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.item-header-menu {
+    text-align: right;
+}
+
+.navbar {
+    justify-content: end;
+
+}
+
+.nav-item {
+    padding-right: 7px;
+    padding-left: 30px;
+    align-items: center;
+}
+
+.navbar nav {
+    align-items: center;
+}

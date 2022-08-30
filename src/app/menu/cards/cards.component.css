@@ -1,0 +1,16 @@
+.example-card {
+    /* max-width: 18rem; */
+    margin-bottom: 8px;
+  }
+  .mat-card{
+    min-width: 15em;
+  }
+  .mat-card-sm-image{
+    border-radius: 5px;
+  }
+  .border{
+    border: 1px solid ;
+  }
+  .full-width{
+    width: 100%;
+  }

@@ -1,0 +1,88 @@
+.top-header {
+    background-color: #2F3542;
+    height: 50px;
+}
+
+.user-img {
+    height: 50px;
+    direction: rtl;
+}
+
+.name {
+    color: #f1f2f6;
+    direction: rtl;
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.branch-name {
+    font-size: 12px;
+}
+
+.seperator {
+    border-left: 1px solid #57606f;
+    /* height: 16px; */
+}
+
+/* .tst {
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+} */
+
+/* .top-search-box { */
+/* background-color: #414a5c; */
+/* width: 100%; */
+/* padding: 12px 20px; */
+/* margin: 8px 0; */
+/* display: inline-block;
+    border: 1px solid #4e586e;
+    border-radius: 4px;
+    box-sizing: border-box; */
+/* font-size: 10px; */
+/* } */
+
+.search input::placeholder {
+    font-size: 13px;
+}
+
+.mat-divider {
+    border-right-color: #4e586e;
+    height: 20px;
+}
+
+.tool-bar {
+    height: 120px;
+    background-color: #f1f2f6;
+    border-bottom: 3px solid #1E90FF;
+}
+
+form {
+    position: relative;
+}
+
+.icon-inline-input {
+    position: absolute;
+    right: 0;
+    padding: 6px;
+    height: 38px;
+    width: 38px;
+}
+
+input {
+    background-color: #414a5c;
+    padding: 6px 35px 6px 0px;
+    display: inline-block;
+    border: 1px solid #4e586e;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.top-left-container {
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}

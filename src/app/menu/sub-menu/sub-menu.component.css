@@ -1,0 +1,10 @@
+.sub-menu {
+    height: 35px;
+    border-bottom: 1px solid #f1f2f6;
+    font-size: 12px;
+}
+
+.arrow {
+    font-size: 12px;
+    height: 11px;
+}
