@@ -5,8 +5,8 @@ import {MatTableDataSource} from '@angular/material/table';
 
 
 const ELEMENT_DATA: periodicEelement[]= [
-  {position: 1, name: 'چیستا محمدی', id: 100256, role: 'حسابدار' ,date: '1400/12/01' ,email:'maggi45@gmail.com' ,lastActivity:'امروز - 10:23'},
-  {position: 2, name: 'چیستا محمدی', id: 100256, role: 'حسابدار' ,date: '1400/12/01' ,email:'maggi45@gmail.com' ,lastActivity:'امروز - 10:23'}
+  {imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', id: 100256, role: 'حسابدار' ,date: '1400/12/01' ,email:'maggi45@gmail.com' ,lastActivity:'امروز - 10:23'},
+  {imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', id: 100256, role: 'حسابدار' ,date: '1400/12/01' ,email:'maggi45@gmail.com' ,lastActivity:'امروز - 10:23'},
 ]
 
 @Component({
@@ -21,7 +21,7 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-    displayedColumns: string[] = ['select','position' , 'name' , 'id' , 'role' , 'date' , 'email' , 'lastActivity'];
+    displayedColumns: string[] = ['select','imageUrl' , 'name' , 'id' , 'role' , 'date' , 'email' , 'lastActivity'];
     dataSource = new MatTableDataSource<periodicEelement>(ELEMENT_DATA);
     selection = new SelectionModel<periodicEelement>(true, []);
   
@@ -47,7 +47,7 @@ export class ListComponent implements OnInit {
       if (!row) {
         return `${this.isAllSelected() ? 'deselect' : 'select'} all`;
       }
-      return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
+      return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.imageUrl + 1}`;
     }
     
   // dataSource= ELEMENT_DATA

@@ -1,5 +1,5 @@
 export interface periodicEelement{
-    position: number;
+    imageUrl: string;
     name: string;
     id: number;
     role: string;

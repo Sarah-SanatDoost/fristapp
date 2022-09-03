@@ -1,7 +1,24 @@
-::ng-deep.mat-tab-label,
-::ng-deep.mat-tab-label-active {
+::ng-deep.mat-tab-label{
     min-width: 0 !important;
     padding: 4px !important;
-    margin: 3px !important;
-    font-size: medium;
+    margin: 3px 10px !important;
+    font-size: small;
+    font-family: "IRANSans";
+    font-weight: 400;
+    /* color: #747d8c; */
+}
+
+::ng-deep.mat-tab-label-active {
+    color: #1e90ff;
+    font-weight: bold;
+}
+
+.mat-tab {
+padding-left:5px ;
+padding-right: 5px;
+
+}
+
+.title{
+    font-weight: 700;
 }

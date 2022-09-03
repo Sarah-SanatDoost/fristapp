@@ -1,7 +1,42 @@
 table {
-    width: 100%;
-  }
-  
-  table th {
-    text-align: right;
-  }
+  width: 100%;
+  /* margin-right: 15px; */
+}
+
+table th {
+  text-align: right;
+  font-family: "IRANSans";
+  padding: 0%;
+  color: #2f3542;
+  font-weight: bold;
+  border-bottom: 1px solid #a4b0be;
+ 
+}
+
+/* table th.mat-header cell{
+  padding: 0% !important;
+} */
+
+table tr {
+  font-family: "IRANSans";
+}
+
+table td{
+  padding: 0%;
+}
+
+.mat-column-select {
+  border-left: 1px solid #dfe4ea;
+  text-align: center;
+  width: 40px;
+  margin: 0%;
+  padding: 0%;
+}
+
+.imgsize {
+width: 25px;
+height:25px ;
+border-radius: 3px;
+padding: 0%;
+margin: 0%;
+}

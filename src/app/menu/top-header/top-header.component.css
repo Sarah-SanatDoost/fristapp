@@ -1,6 +1,7 @@
 .top-header {
     background-color: #2F3542;
     height: 50px;
+
 }
 
 .user-img {
@@ -15,11 +16,11 @@
 
 .user-name {
     font-weight: bold;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .branch-name {
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .seperator {
@@ -79,6 +80,10 @@ input {
     border: 1px solid #4e586e;
     border-radius: 4px;
     box-sizing: border-box;
+    height: 2.1em;
+}
+::placeholder {
+    font-size: 12px;
 }
 
 .top-left-container {

@@ -1,10 +1,10 @@
 
 @font-face {
     font-family: "IRANSans";
-    src: url(assets/fonts/IRANSansWebKE.ttf);
+    src: url(assets/fonts/IRANSansWebKE.ttf) format('truetype');
 }
 html, body { height: 100%; }
-body { margin: 0; padding: 0%; font-family: IRANSans, "Helvetica Neue", sans-serif; }
+body { margin: 0; padding: 0%; font-family: "IRANSans", "Helvetica Neue", sans-serif; }
 
 .rtl{
     direction: rtl;
@@ -14,4 +14,11 @@ body { margin: 0; padding: 0%; font-family: IRANSans, "Helvetica Neue", sans-ser
 }
 .blue-font {
     color: #1E90FF;
+}
+.iransans{
+    font-family: "IRANSans";
+}
+.iransans-bold {
+    font-family: "IRANSans";
+    font-weight: bold;
 }
