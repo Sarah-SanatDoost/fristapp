@@ -11,6 +11,8 @@
 ::ng-deep.mat-tab-label-active {
     color: #1e90ff;
     font-weight: bold;
+    /* margin: 3px 10px !important;
+    padding: 4px !important; */
 }
 
 .mat-tab {

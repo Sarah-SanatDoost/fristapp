@@ -13,13 +13,14 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CardsComponent } from './menu/cards/cards.component';
+import { CardsComponent } from './card-menu/cards/cards.component';
 import { TopHeaderComponent } from './menu/top-header/top-header.component';
 import { HeaderMenuComponent } from './menu/header-menu/header-menu.component';
 import { SubMenuComponent } from './menu/sub-menu/sub-menu.component';
 import { PanelComponent } from './menu/panel/panel.component';
 import { ToolBarComponent } from './menu/tool-bar/tool-bar.component';
 import { ListComponent } from './menu/list/list.component';
+import { CardMenuComponent } from './card-menu/card-menu.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { ListComponent } from './menu/list/list.component';
     SubMenuComponent,
     PanelComponent,
     ToolBarComponent,
-    ListComponent
+    ListComponent,
+    CardMenuComponent
     
     
   ],
