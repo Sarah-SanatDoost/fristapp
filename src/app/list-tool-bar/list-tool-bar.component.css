@@ -1,0 +1,29 @@
+.list-tool-bar{
+    height: 120px;
+    background-color: #f1f2f6;
+    border-bottom: 3px solid #1E90FF;
+    overflow: hidden;
+}
+form {
+    position: relative;
+}
+
+.icon-inline-input {
+    position: absolute;
+    right: 0;
+    padding: 6px;
+    height: 38px;
+    width: 38px;
+}
+
+input {
+    padding: 6px 35px 6px 0px;
+}
+.tool-button {
+    border-bottom: 3px  #1E90FF;
+}
+.printerbtn{
+    width: 100px ;
+     height: 32px;
+     bottom: 13px;
+}
