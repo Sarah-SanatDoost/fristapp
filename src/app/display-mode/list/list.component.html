@@ -1,10 +1,13 @@
+<app-list-tool-bar></app-list-tool-bar>
 <div class="rtl p-0">
     <table mat-table [dataSource]="dataSource">
 
         <!-- Checkbox Column -->
         <ng-container matColumnDef="select">
             <th mat-header-cell *matHeaderCellDef style="text-align: center">
-                <mat-checkbox (change)="$event ? toggleAllRows() : null"
+                <mat-checkbox 
+                
+                (change)="$event ? toggleAllRows() : null"
                     [checked]="selection.hasValue() && isAllSelected()"
                     [indeterminate]="selection.hasValue() && !isAllSelected()" [aria-label]="checkboxLabel()">
                 </mat-checkbox>

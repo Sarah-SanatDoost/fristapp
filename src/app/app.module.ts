@@ -23,7 +23,7 @@ import { ListComponent } from './display-mode/list/list.component';
 import { CardMenuComponent } from './display-mode/card-menu/card-menu.component';
 import { DisplayModeComponent } from './display-mode/display-mode.component';
 import { ListToolBarComponent } from './display-mode/list/list-tool-bar/list-tool-bar.component';
-
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -54,7 +54,8 @@ import { ListToolBarComponent } from './display-mode/list/list-tool-bar/list-too
     MatCheckboxModule,
     MatCardModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
