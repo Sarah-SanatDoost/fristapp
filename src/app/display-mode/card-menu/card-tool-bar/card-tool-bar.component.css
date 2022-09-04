@@ -3,21 +3,52 @@
     background-color: #f1f2f6;
     border-bottom: 3px solid #1E90FF;
 }
-      form{
-        position: relative;
-    }
-    
-    .icon-inline-input{
-        position: absolute;
-        right: 0;
-        padding: 6px;
-        height: 38px;
-        width: 38px;
-    }
-    
-    input{    
-        padding: 6px 35px 6px 0px;
-    }
-    .tool-button{
-        border-bottom: 3px soid #1E90FF;
-    }
+
+form {
+    position: relative;
+}
+
+.icon-inline-input {
+    position: absolute;
+    right: 0;
+    padding: 6px;
+    height: 38px;
+    width: 38px;
+}
+
+input {
+    padding: 6px 35px 6px 0px;
+}
+
+.tool-button {
+    border-bottom: 3px soid #1E90FF;
+}
+
+.checkbox {
+    background-color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: none;
+    bottom: 3px;
+    align-items: center;
+    display: inline-block;
+}
+/* .mat-checkbox ::shadow{
+display: none;
+} */
+
+.mat-flat-button {
+    bottom: 5px;
+    height: 32px;
+    border-radius: 6px;
+}
+
+.mat-icon-button-hover-checkbox{
+    display: none;
+}
+.printerbtn{
+    width: 100px ;
+     height: 32px;
+     bottom: 13px;
+}
