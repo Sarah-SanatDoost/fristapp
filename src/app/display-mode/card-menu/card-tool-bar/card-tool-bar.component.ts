@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
-import { CardMenuComponent } from 'src/app/card-menu/card-menu.component';
+import { CardMenuComponent } from 'src/app/display-mode/card-menu/card-menu.component';
 // import { Router } from '@angular/router';
 
 @Component({
@@ -7,7 +7,7 @@ import { CardMenuComponent } from 'src/app/card-menu/card-menu.component';
   templateUrl: './card-tool-bar.component.html',
   styleUrls: ['./card-tool-bar.component.css']
 })
-export class ToolBarComponent implements OnInit {
+export class CardToolBarComponent implements OnInit {
 
   constructor() { }
 

@@ -18,10 +18,11 @@ import { TopHeaderComponent } from './menu/top-header/top-header.component';
 import { HeaderMenuComponent } from './menu/header-menu/header-menu.component';
 import { SubMenuComponent } from './menu/sub-menu/sub-menu.component';
 import { PanelComponent } from './menu/panel/panel.component';
-import { CardToolBarComponent } from './display-mode/card-menu/card-tool-bar/c';
+import { CardToolBarComponent } from './display-mode/card-menu/card-tool-bar/card-tool-bar.component';
 import { ListComponent } from './display-mode/list/list.component';
 import { CardMenuComponent } from './display-mode/card-menu/card-menu.component';
 import { DisplayModeComponent } from './display-mode/display-mode.component';
+import { ListToolBarComponent } from './display-mode/list/list-tool-bar/list-tool-bar.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { DisplayModeComponent } from './display-mode/display-mode.component';
     CardToolBarComponent,
     ListComponent,
     CardMenuComponent,
-    DisplayModeComponent
+    DisplayModeComponent,
+    ListToolBarComponent
     
     
   ],
