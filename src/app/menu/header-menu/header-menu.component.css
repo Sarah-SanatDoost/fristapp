@@ -24,6 +24,12 @@
     align-items: center;
 }
 
-.navbar nav {
+.navbar-nav {
     align-items: center;
+    margin-right: 1.3rem;
+}
+.tool{
+    margin-left: 25px;
+    font-size: small;
+    cursor: pointer;
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { periodicEelement } from '../interface/periodicElement';
+import { periodicEelement } from '../../menu/interface/periodicElement';
 import {SelectionModel} from '@angular/cdk/collections';
 import {MatTableDataSource} from '@angular/material/table';
 
