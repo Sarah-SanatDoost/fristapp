@@ -1,0 +1,15 @@
+form {
+    position: relative;
+}
+
+.icon-inline-input {
+    position: absolute;
+    right: 0;
+    padding: 6px;
+    height: 38px;
+    width: 38px;
+}
+
+input {
+    padding: 6px 35px 6px 0px;
+}

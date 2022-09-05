@@ -24,6 +24,7 @@ import { CardMenuComponent } from './display-mode/card-menu/card-menu.component'
 import { DisplayModeComponent } from './display-mode/display-mode.component';
 import { ListToolBarComponent } from './display-mode/list/list-tool-bar/list-tool-bar.component';
 import {MatSelectModule} from '@angular/material/select';
+import { UserSearchBoxComponent } from './display-mode/user-search-box/user-search-box.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {MatSelectModule} from '@angular/material/select';
     ListComponent,
     CardMenuComponent,
     DisplayModeComponent,
-    ListToolBarComponent
+    ListToolBarComponent,
+    UserSearchBoxComponent
     
     
   ],
