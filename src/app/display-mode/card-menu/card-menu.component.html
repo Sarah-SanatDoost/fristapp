@@ -2,11 +2,38 @@
 <app-card-tool-bar></app-card-tool-bar>
 <div class="container p-0 m-0">
     <div class="row m-0">
+
+      
+<mat-card *ngFor="let element of elements" class="example-card rtl border iransans">
+  <div class="d-flex align-items-center">
+     
+      <div class="col d-flex justify-content-start">
+          <mat-checkbox></mat-checkbox>
+      </div>
+      <div class="col mt-2 d-flex justify-content-end">
+          <mat-icon>more_vert</mat-icon>
+      </div>
+  </div>
+  <mat-card-title-group class="d-flex " >
+      <img class="col-4 " mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+      <div class="col-8 ">
+          <mat-card-title>{{element.name}}</mat-card-title>
+          <mat-card-subtitle class="m-0">{{element.id}} </mat-card-subtitle>
+          <mat-card-subtitle>
+              <!-- <mat-icon>supervisor_account</mat-icon> -->
+              {{element.email}}
+          </mat-card-subtitle>
+      </div>
+  </mat-card-title-group>
+ 
+  <div class="d-flex px-4">{{element.role}}</div>
+  <div class="d-flex row justify-content-end">{{element.lastActivity}}</div>
+</mat-card>
+      <!-- <app-cards class="d-flex col-sm-6 col-md-3"></app-cards>
       <app-cards class="d-flex col-sm-6 col-md-3"></app-cards>
       <app-cards class="d-flex col-sm-6 col-md-3"></app-cards>
       <app-cards class="d-flex col-sm-6 col-md-3"></app-cards>
       <app-cards class="d-flex col-sm-6 col-md-3"></app-cards>
-      <app-cards class="d-flex col-sm-6 col-md-3"></app-cards>
-      <app-cards class="d-flex col-sm-6 col-md-3"></app-cards>
+      <app-cards class="d-flex col-sm-6 col-md-3"></app-cards> -->
     </div>
   </div>
