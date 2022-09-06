@@ -1,4 +1,4 @@
-.card-tool-bar {
+/* .card-tool-bar {
     height: 120px;
     background-color: #f1f2f6;
     border-bottom: 3px solid #1E90FF;
@@ -20,9 +20,7 @@
     align-items: center;
     display: inline-block;
 }
-/* .mat-checkbox ::shadow{
-display: none;
-} */
+
 
 .mat-flat-button {
     bottom: 5px;
@@ -37,4 +35,4 @@ display: none;
     width: 100px ;
      height: 32px;
      bottom: 13px;
-}
+} */
