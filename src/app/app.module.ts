@@ -13,7 +13,6 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CardsComponent } from './display-mode/card-menu/cards/cards.component';
 import { TopHeaderComponent } from './menu/top-header/top-header.component';
 import { HeaderMenuComponent } from './menu/header-menu/header-menu.component';
 import { SubMenuComponent } from './menu/sub-menu/sub-menu.component';
@@ -30,7 +29,6 @@ import { UserSearchBoxComponent } from './display-mode/user-search-box/user-sear
   declarations: [
     AppComponent,
     MenuComponent,
-    CardsComponent,
     TopHeaderComponent,
     HeaderMenuComponent,
     SubMenuComponent,

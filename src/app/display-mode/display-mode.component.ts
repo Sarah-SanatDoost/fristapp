@@ -14,5 +14,5 @@ export class DisplayModeComponent implements OnInit {
 
 
   Iscard: boolean = true;
-  Islist: boolean = false;
+  Islist: boolean = true;
 }
