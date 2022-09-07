@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output ,EventEmitter} from '@angular/core';
 import { CardMenuComponent } from 'src/app/display-mode/card-menu/card-menu.component';
 // import { Router } from '@angular/router';
 
@@ -9,27 +9,19 @@ import { CardMenuComponent } from 'src/app/display-mode/card-menu/card-menu.comp
 })
 export class CardToolBarComponent implements OnInit {
 
+  @Input() IsCard : boolean = true;
+  @Input() IsList : boolean =false;
+
+  @Output() btnClick = new EventEmitter()
+
+
   constructor() { }
 
 
-  @Output() onList() {
-// this.router.navigateByUrl('/list');
-
-// Islist = true;
-// Iscard= false;
+  public onList() {
+    this.btnClick.emit(this.IsCard === false && this.IsList === true);
   }
-
-
-
-// Iscard: boolean = true
-// switchCard : any = CardMenuComponent
-
-  // public cardOrList(){
-    
-  //   if card
-  // }
-
-
+  
   ngOnInit(): void {
   }
 

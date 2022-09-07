@@ -20,7 +20,5 @@ export class DisplayModeComponent implements OnInit {
   public onList() {
  this.IsCard = false;
   }
-  // public onBtnClick (){
-    
-  // }
+
 }
