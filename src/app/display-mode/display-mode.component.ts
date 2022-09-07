@@ -14,11 +14,17 @@ export class DisplayModeComponent implements OnInit {
 
 
   IsCard: boolean = true;
-  // Islist: boolean = false;
+  Islist: boolean = false;
 
 
   public onList() {
  this.IsCard = false;
+ this.Islist = true ;
+  }
+
+  public onCard() {
+    this.Islist = false;
+    this.IsCard = true;
   }
 
 }

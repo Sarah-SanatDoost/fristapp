@@ -1,3 +1,3 @@
 
 <app-card-menu (btnClick)="onList()" *ngIf="IsCard"></app-card-menu>
-<app-list *ngIf="!IsCard"></app-list>
+<app-list (BtnClick)="onCard()" *ngIf="Islist"></app-list>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-list-tool-bar',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListToolBarComponent implements OnInit {
 
+@Input() IsCard: boolean = false;
+@Input() IsList: boolean = true;
+
+@Output() BtnClick = new EventEmitter()
   constructor() { }
 
   ngOnInit(): void {
   }
 
+public onCard() {
+  this.BtnClick.emit (this.IsCard === true && this.IsList === false)
+}
 }

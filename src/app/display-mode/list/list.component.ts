@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input , Output , EventEmitter} from '@angular/core';
 import { periodicEelement } from '../../menu/interface/periodicElement';
 import {SelectionModel} from '@angular/cdk/collections';
 import {MatTableDataSource} from '@angular/material/table';
@@ -16,6 +16,11 @@ const ELEMENT_DATA: periodicEelement[]= [
 })
 export class ListComponent implements OnInit {
 
+
+  @Input() IsCard: boolean = false;
+@Input() IsList: boolean = true;
+
+@Output() BtnClick = new EventEmitter()
   constructor() { }
 
   ngOnInit(): void {
@@ -50,6 +55,9 @@ export class ListComponent implements OnInit {
       return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.imageUrl + 1}`;
     }
     
+    public onCard() {
+      this.BtnClick.emit (this.IsCard === true && this.IsList === false)
+    }
   // dataSource= ELEMENT_DATA
   }
 
