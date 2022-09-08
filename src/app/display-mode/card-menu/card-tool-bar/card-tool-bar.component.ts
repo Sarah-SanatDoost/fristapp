@@ -19,7 +19,7 @@ export class CardToolBarComponent implements OnInit {
 
 
   public onList() {
-    this.btnClick.emit(this.IsCard === false && this.IsList === true);
+    this.btnClick.emit();
   }
   
   ngOnInit(): void {
