@@ -12,7 +12,8 @@
             <div class="align-items-center justify-content-center">
 
                 <button mat-icon-button class="checkbox">
-                    <mat-checkbox ></mat-checkbox>
+                    <mat-checkbox (change)="onCheckboxClicked($event)"
+                                 [checked]="isChecked"></mat-checkbox>
                 </button>
 
                 <button mat-icon-button style="bottom: 5px;" color="primary">
