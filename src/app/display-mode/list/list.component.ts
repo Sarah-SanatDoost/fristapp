@@ -56,7 +56,7 @@ export class ListComponent implements OnInit {
     }
     
     public onCard() {
-      this.BtnClick.emit (this.IsCard === true && this.IsList === false)
+      this.BtnClick.emit ()
     }
   // dataSource= ELEMENT_DATA
   }

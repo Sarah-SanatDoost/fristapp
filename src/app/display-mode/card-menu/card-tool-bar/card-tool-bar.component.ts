@@ -25,7 +25,7 @@ export class CardToolBarComponent implements OnInit {
 
   @Input() IsCard: boolean = true;
   @Input() IsList: boolean = false;
-  @Output() isAllCheckboxSelected = new EventEmitter();
+  @Output() allCheckboxSelected = new EventEmitter();
   @Input() isChecked: boolean = false;
   @Output() btnClick = new EventEmitter()
 
@@ -52,7 +52,7 @@ export class CardToolBarComponent implements OnInit {
 
   public onCheckboxClicked(e: any) {
     this.isChecked = e.checked;
-    this.isAllCheckboxSelected.emit(this.isChecked);
+    this.allCheckboxSelected.emit(this.isChecked);
   }
 
 }
