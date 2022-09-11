@@ -40,11 +40,11 @@ export class CardToolBarComponent implements OnInit {
   }
 
 
-  isAllSelected() {
-    const numSelected = this.selection.selected.length;
-    const numRows = this.dataSource.data.length;
-    return numSelected === numRows
-  }
+  // isAllSelected() {
+  //   const numSelected = this.selection.selected.length;
+  //   const numRows = this.dataSource.data.length;
+  //   return numSelected === numRows
+  // }
 
 
   ngOnInit(): void {
@@ -52,7 +52,6 @@ export class CardToolBarComponent implements OnInit {
 
   public onCheckboxClicked(e: any) {
     this.isChecked = e.checked;
-    console.log(this.isChecked);
     this.isAllCheckboxSelected.emit(this.isChecked);
   }
 
