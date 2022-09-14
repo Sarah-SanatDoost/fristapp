@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BreakpointsService } from 'src/app/services/breakpoints/breakpoints.service';
 
 @Component({
   selector: 'app-top-header',
@@ -7,10 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopHeaderComponent implements OnInit {
 
-  
-  constructor() { }
+  constructor(public breakpoints: BreakpointsService) { }
 
   ngOnInit(): void {
-  }
 
+  }
 }
