@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BreakpointsService } from 'src/app/services/breakpoints/breakpoints.service';
 
 @Component({
   selector: 'app-header-menu',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderMenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(public breakpoints: BreakpointsService) { }
 
   ngOnInit(): void {
   }

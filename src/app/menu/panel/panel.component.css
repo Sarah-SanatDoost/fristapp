@@ -24,3 +24,8 @@ padding-right: 5px;
 .title{
     font-weight: 700;
 }
+
+.card-tool-bar {
+    height: 100px;
+    background-color: #f1f2f6;
+}
