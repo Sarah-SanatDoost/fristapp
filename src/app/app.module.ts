@@ -25,6 +25,7 @@ import { ListToolBarComponent } from './display-mode/list/list-tool-bar/list-too
 import {MatSelectModule} from '@angular/material/select';
 import { UserSearchBoxComponent } from './display-mode/user-search-box/user-search-box.component';
 import { MobileUserComponent } from './mobile-user/mobile-user.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { MobileUserComponent } from './mobile-user/mobile-user.component';
     MatCardModule,
     BrowserAnimationsModule,
     MatTableModule,
+    MatSidenavModule,
     MatSelectModule
   ],
   providers: [],

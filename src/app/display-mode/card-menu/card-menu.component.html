@@ -3,13 +3,13 @@
 
   <div class="container-fluid w-100 d-flex row rtl p-0 m-0">
 
-    <mat-card *ngFor="let element of elements" class="col-sm-6 col-md-3 w-md-25 border iransans">
+    <mat-card *ngFor="let element of elements" class="col-sm-6 col-md-3 w-md-25 border iransans p-2">
       <div class="d-flex align-items-center">
 
-        <div class="col d-flex justify-content-start" >
-          <mat-checkbox [checked]="checked"></mat-checkbox>
+        <div class="col d-flex justify-content-start mb-2">
+          <mat-checkbox size="small" color="primary" [checked]="checked"></mat-checkbox>
         </div>
-        <div class="col mt-2 d-flex justify-content-end">
+        <div class="col d-flex justify-content-end">
           <mat-icon>more_vert</mat-icon>
         </div>
       </div>
@@ -17,15 +17,15 @@
         <img class="col-4 " mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
         <div class="col-8 ">
           <mat-card-title>{{element.name}}</mat-card-title>
-          <mat-card-subtitle class="m-0">{{element.id}} </mat-card-subtitle>
+          <mat-card-subtitle class="mb-1">{{element.id}} </mat-card-subtitle>
           <mat-card-subtitle>
             {{element.email}}
           </mat-card-subtitle>
         </div>
       </mat-card-title-group>
 
-      <div class="d-flex px-4">{{element.role}}</div>
-      <div class="d-flex row justify-content-end">{{element.lastActivity}}</div>
+      <div class="role d-flex px-3">{{element.role}}</div>
+      <div class="lastActivity px-3 d-flex row justify-content-end">{{element.lastActivity}}</div>
     </mat-card>
 
   </div>

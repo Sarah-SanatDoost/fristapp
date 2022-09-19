@@ -23,7 +23,7 @@ const elements: periodicEelement[] = [
 
 
 export class CardToolBarComponent implements OnInit {
-
+  showFiller = false;
   @Input() IsCard: boolean = true;
   @Input() IsList: boolean = false;
   @Output() allCheckboxSelected = new EventEmitter();

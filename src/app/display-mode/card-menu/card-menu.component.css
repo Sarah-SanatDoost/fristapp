@@ -1,5 +1,7 @@
 .mat-card-sm-image {
     border-radius: 5px;
+    width: 70px;
+    height: 70px;
   }
   
   .border {
@@ -11,7 +13,7 @@
   }
   
   .mat-card-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
   }
 
@@ -27,21 +29,6 @@
 }
 
 
-
-.tool-button {
-    border-bottom: 3px soid #1E90FF;
-}
-
-.checkbox {
-    background-color: white;
-    width: 32px;
-    height: 32px;
-    border-radius: 6px;
-    border: none;
-    bottom: 3px;
-    align-items: center;
-    display: inline-block;
-}
 /* .mat-checkbox ::shadow{
 display: none;
 } */
@@ -60,3 +47,33 @@ display: none;
      height: 32px;
      bottom: 13px;
 }
+
+.mat-icon {
+  color: #a4b0be;
+  font-size: 1.2em;
+}
+::ng-deep .mat-checkbox-frame {
+  /* border-color: #a4b0be;  */
+  border: 1.5px solid #a4b0be;
+}
+.mat-card-title ,.lastActivity {
+  color: #2f3542;
+}
+.lastActivity{
+  font-size: 0.9em;
+}
+.mat-card-subtitle{
+  color: #747d8c;
+}
+
+::ng-deep .mat-checkbox .mat-checkbox-frame {
+  transform: scale(0.9);
+}
+.role{
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+/* .mat-checkbox {
+  font-size: 1em;
+} */
