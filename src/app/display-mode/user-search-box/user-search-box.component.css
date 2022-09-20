@@ -1,5 +1,6 @@
 form {
     position: relative;
+   
 }
 
 .icon-inline-input {
@@ -12,4 +13,8 @@ form {
 
 input {
     padding: 6px 35px 6px 0px;
+   
 }
+/* .form-control{
+    border: 4px #747d8c;
+} */
