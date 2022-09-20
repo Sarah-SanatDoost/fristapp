@@ -25,5 +25,24 @@ input {
 .printerbtn{
     width: 100px ;
      height: 32px;
-     bottom: 13px;
+     bottom: 4px;
+}
+.bg-button {
+    background-color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: none;
+    bottom: 3px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    margin-right: 0.4em;
+}
+.mat-flat-button {
+    /* bottom: 5px; */
+    height: 32px;
+    border-radius: 6px;
+    margin-right: 0.4em;
 }
