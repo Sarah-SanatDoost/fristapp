@@ -96,3 +96,12 @@ display: none;
   color: #775eb5;
   background-color: #f4f0ff;
 }
+.active{
+  color: #ffffff;
+
+  font-size: 0.8rem;
+}
+.bg{
+  background-color: #a4b0be;
+  
+}

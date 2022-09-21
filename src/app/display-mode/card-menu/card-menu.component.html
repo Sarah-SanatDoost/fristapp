@@ -16,7 +16,13 @@
       <mat-card-title-group class="d-flex ">
         <img class="col-4 " mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
         <div class="col-8 d-flex flex-column align-items-start">
-          <mat-card-title>{{element.name}}</mat-card-title>
+          <div class="d-flex">
+            <mat-card-title>{{element.name}}</mat-card-title>
+            <span class="active" [hidden]="element.active">
+              <span class="bg px-2 py-1 mr-1">غیرفعال</span>
+              </span>
+          </div>
+
           <mat-card-subtitle class="mb-1">{{element.id}} </mat-card-subtitle>
           <mat-card-subtitle class="m-0">
             {{element.email}}
@@ -25,7 +31,7 @@
       </mat-card-title-group>
 
       <div class="d-flex">
-        <div *ngFor="let role of element.roles" >
+        <div *ngFor="let role of element.roles">
           <div class="role d-flex px-1 py-2" [style]="setRoleTitle(role)">
             <span [class]="roleStyle" class="px-2 py-1">{{ role }}</span>
           </div>
