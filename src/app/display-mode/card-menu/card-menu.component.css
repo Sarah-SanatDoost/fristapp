@@ -77,3 +77,22 @@ display: none;
 /* .mat-checkbox {
   font-size: 1em;
 } */
+/* ============================== */
+.manager {
+  color: #baa152;
+  background-color: #faf4e1;
+  
+}
+.user {
+  color: #5f68fa;
+  background-color: #f5f5f5;
+}
+.accountant {
+  color: #27b360;
+  background-color: #dff7e9;
+  
+}
+.storekeeper{
+  color: #775eb5;
+  background-color: #f4f0ff;
+}

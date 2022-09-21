@@ -14,31 +14,53 @@ export class CardMenuComponent implements OnInit {
 
   @Input() IsCard: boolean = true;
   @Input() IsList: boolean = false;
-  @Input() checked: boolean =false;
+  @Input() checked: boolean = false;
   @Output() btnClick = new EventEmitter();
   // @Input() allSelect = new  EventEmitter()
 
+
+
   elements: periodicEelement[] = [
+    { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', id: 100256, role: 'مدیر', date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
+    { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', id: 100256, role: 'کاربر', date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
     { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', id: 100256, role: 'حسابدار', date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
-    { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', id: 100256, role: 'حسابدار', date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
-    { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', id: 100256, role: 'حسابدار', date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
-    { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', id: 100256, role: 'حسابدار', date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
+    { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', id: 100256, role: 'مسئول انبار', date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
     { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', id: 100256, role: 'حسابدار', date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
     { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', id: 100256, role: 'حسابدار', date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
   ]
+  // roleTitle :string[] = ['کاربر','مدیر']
+
+  roleTitle = '';
+  roleStyle = '';
+
+
   constructor() { }
 
 
   public onList() {
     this.btnClick.emit();
   }
-
+  public setRoleTitle(roleTitle: string) {
+    // console.log(roleTitle);
+    if (roleTitle === 'مدیر') {
+      this.roleStyle = 'manager';
+    }
+    else if (roleTitle === 'حسابدار') {
+      this.roleStyle = 'accountant';
+    }
+    else if (roleTitle === 'کاربر') {
+      this.roleStyle = 'user';
+    }
+    else if (roleTitle === 'مسئول انبار') {
+      this.roleStyle = 'storekeeper'
+    }  
+  }
   ngOnInit(): void {
   }
   dataSource = new MatTableDataSource<periodicEelement>(this.elements);
   selection = new SelectionModel<periodicEelement>(true, []);
 
-  public onChecked(e:boolean) {
+  public onChecked(e: boolean) {
     this.checked = e;
   }
 
