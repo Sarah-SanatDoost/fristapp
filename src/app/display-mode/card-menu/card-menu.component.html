@@ -7,7 +7,7 @@
       <div class="d-flex align-items-center">
 
         <div class="col d-flex justify-content-start mb-2">
-          <mat-checkbox size="small" color="primary" [checked]="checked"></mat-checkbox>
+          <mat-checkbox size="small" color="primary" [checked]="checked" (change)="onSelected($event , element.id)"></mat-checkbox>
         </div>
         <div class="col d-flex justify-content-end">
           <mat-icon>more_vert</mat-icon>

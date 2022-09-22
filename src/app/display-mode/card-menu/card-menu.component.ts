@@ -16,23 +16,22 @@ export class CardMenuComponent implements OnInit {
   @Input() IsList: boolean = false;
   @Input() checked: boolean = false;
   @Output() btnClick = new EventEmitter();
-  // @Input() allSelect = new  EventEmitter()
+
+  checkboxSelected: number[] = []
 
 
 
   elements: periodicEelement[] = [
-    { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', active: true , id: 100256, roles: ['مدیر', 'کاربر'], date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
-    { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'شهرود اشتری', active:true , id: 100256, roles: ['کاربر'], date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
-    { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', active:false , id: 100256, roles: ['حسابدار'], date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
-    { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', active:false , id: 100256, roles: ['مسئول انبار'], date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
-    { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', active:false , id: 100256, roles: ['حسابدار'], date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
-    { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', active:false , id: 100256, roles: ['حسابدار'], date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
+    { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', active: true, id: 10256, roles: ['مدیر', 'کاربر'], date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
+    { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'شهرود اشتری', active: true, id: 10257, roles: ['کاربر'], date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
+    { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', active: false, id: 10258, roles: ['حسابدار'], date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
+    { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', active: false, id: 10259, roles: ['مسئول انبار'], date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
+    { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', active: false, id: 10260, roles: ['حسابدار'], date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
+    { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', active: false, id: 10261, roles: ['حسابدار'], date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
   ]
-  // roleTitle :string[] = ['کاربر','مدیر']
 
   roleTitle = '';
-  roleStyle = '';
-  // isActive: boolean = false;
+  roleStyle = ''
 
   constructor() { }
 
@@ -64,6 +63,19 @@ export class CardMenuComponent implements OnInit {
   public onChecked(e: boolean) {
     this.checked = e;
   }
+
+  // public onSelected(e: any, id: number) {
+  //   if (e.checked === true) {
+  //     this.checkboxSelected.push(id)
+  //     if (this.checkboxSelected.includes(id)) {
+  //       this.checkboxSelected.splice (indexOf(i) ,1)
+  //     }
+  //   }
+  // }
+
+
+
+
 
   // public isAllSelected(){
   //   const numSelected = this.selection.selected.length;
