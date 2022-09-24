@@ -3,7 +3,7 @@
 
   <div class="container-fluid w-100 d-flex row rtl p-0 m-0">
 
-    <mat-card *ngFor="let element of elements" class="col-sm-6 col-md-3 w-md-25 border iransans p-2" [class]="checkboxSelected.includes(element.id)  ? 'bg' : '' ">
+    <mat-card *ngFor="let element of elements" class="col-sm-6 col-md-3 w-md-25 border iransans p-2" [class]="checkboxSelectedService.checkboxSelected.includes(element.id)  ? 'bg' : '' ">
       <div class="d-flex align-items-center">
 
         <div class="col d-flex justify-content-start mb-2">

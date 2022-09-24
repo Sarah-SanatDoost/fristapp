@@ -2,6 +2,8 @@ import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
 import { periodicEelement } from 'src/app/menu/interface/periodicElement';
 import { MatTableDataSource } from '@angular/material/table';
 import { SelectionModel } from '@angular/cdk/collections';
+import { CardCheckboxSelectedService } from 'src/app/services/card-checkbox-selected.service';
+
 
 @Component({
   selector: 'app-card-menu',
@@ -17,10 +19,6 @@ export class CardMenuComponent implements OnInit {
   @Input() checked: boolean = false;
   @Output() btnClick = new EventEmitter();
 
-  checkboxSelected: number[] = []
-
-
-
   elements: periodicEelement[] = [
     { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', active: true, id: 10256, roles: ['مدیر', 'کاربر'], date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
     { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'شهرود اشتری', active: true, id: 10257, roles: ['کاربر'], date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
@@ -33,7 +31,7 @@ export class CardMenuComponent implements OnInit {
   roleTitle = '';
   roleStyle = ''
 
-  constructor() { }
+  constructor(public checkboxSelectedService :CardCheckboxSelectedService) { }
 
 
   public onList() {
@@ -60,24 +58,36 @@ export class CardMenuComponent implements OnInit {
   dataSource = new MatTableDataSource<periodicEelement>(this.elements);
   selection = new SelectionModel<periodicEelement>(true, []);
 
-  public onChecked(e: boolean) {
-    this.checked = e;
+  public onChecked(e: boolean ) {
+    this.checked = e
+
+    if(this.checked ){
+      for(let i=0 ; i<this.elements.length ; i++){
+        this.checkboxSelectedService.checkboxSelected.push(this.elements[i].id)
+      }
+    }
+    else{
+      this.checkboxSelectedService.checkboxSelected=[]
+    }
   }
 
   public onSelected(e: any, id: number) {
-    let i = this.checkboxSelected.indexOf(id)
+    let i = this.checkboxSelectedService.checkboxSelected.indexOf(id)
 
 
-    if (!this.checkboxSelected.includes(id)) {
-      this.checkboxSelected.push(id)
+    if (!this.checkboxSelectedService.checkboxSelected.includes(id)) {
+      this.checkboxSelectedService.checkboxSelected.push(id)
     }
     else {
-      this.checkboxSelected.splice(i, 1)
+      this.checkboxSelectedService.checkboxSelected.splice(i, 1)
     }
     // console.log(this.checkboxSelected)
   }
-
+}
  
+
+
+
 
 
 
@@ -86,4 +96,4 @@ export class CardMenuComponent implements OnInit {
   //   const numRows = this.dataSource.data.length;
   //   return numSelected === numRows;
   // }
-}
+

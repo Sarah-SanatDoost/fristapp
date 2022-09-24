@@ -5,6 +5,7 @@ import { SelectionModel } from '@angular/cdk/collections';
 import { MatTableDataSource } from '@angular/material/table';
 import { periodicEelement } from 'src/app/menu/interface/periodicElement';
 import { BreakpointsService } from 'src/app/services/breakpoints/breakpoints.service';
+import { CardCheckboxSelectedService } from 'src/app/services/card-checkbox-selected.service';
 
 const elements: periodicEelement[] = [
   { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', active: false , id: 100256, roles: ['حسابدار'], date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
@@ -33,7 +34,9 @@ export class CardToolBarComponent implements OnInit {
   dataSource = new MatTableDataSource<periodicEelement>(elements);
   selection = new SelectionModel<periodicEelement>(true, []);
 
-  constructor(public breakpoints :BreakpointsService) { }
+  constructor(
+    public breakpoints :BreakpointsService , 
+    public checkboxSelectedService :CardCheckboxSelectedService) { }
 
 
   public onList() {
