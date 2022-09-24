@@ -5,9 +5,11 @@ import {MatTableDataSource} from '@angular/material/table';
 
 
 const ELEMENT_DATA: periodicEelement[]= [
-  {imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', active: false , id: 100256, roles: ['حسابدار'] ,date: '1400/12/01' ,email:'maggi45@gmail.com' ,lastActivity:'امروز - 10:23'},
+  {imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', active: false , id: 100256, roles: ['مدیر', 'کاربر'] ,date: '1400/12/01' ,email:'maggi45@gmail.com' ,lastActivity:'امروز - 10:23'},
   {imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', active: false , id: 100256, roles: ['حسابدار'] ,date: '1400/12/01' ,email:'maggi45@gmail.com' ,lastActivity:'امروز - 10:23'},
 ]
+
+
 
 @Component({
   selector: 'app-list',
@@ -16,12 +18,30 @@ const ELEMENT_DATA: periodicEelement[]= [
 })
 export class ListComponent implements OnInit {
 
+  roleTitle = '';
+  roleStyle = ''
 
   @Input() IsCard: boolean = false;
 @Input() IsList: boolean = true;
 
 @Output() BtnClick = new EventEmitter()
   constructor() { }
+
+  public setRoleTitle(roleTitle: string) {
+    console.log(roleTitle);
+    if (roleTitle === 'مدیر') {
+      this.roleStyle = 'manager';
+    }
+    else if (roleTitle === 'حسابدار') {
+      this.roleStyle = 'accountant';
+    }
+    else if (roleTitle === 'کاربر') {
+      this.roleStyle = 'user';
+    }
+    else if (roleTitle === 'مسئول انبار') {
+      this.roleStyle = 'storekeeper'
+    }
+  }
 
   ngOnInit(): void {
   }
@@ -59,6 +79,12 @@ export class ListComponent implements OnInit {
       this.BtnClick.emit ()
     }
   // dataSource= ELEMENT_DATA
+
+
+
+  public onChange(){
+    console.log('ssalam')
+  }
   }
 
 
