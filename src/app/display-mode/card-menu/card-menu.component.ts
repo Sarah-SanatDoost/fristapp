@@ -64,16 +64,20 @@ export class CardMenuComponent implements OnInit {
     this.checked = e;
   }
 
-  // public onSelected(e: any, id: number) {
-  //   if (e.checked === true) {
-  //     this.checkboxSelected.push(id)
-  //     if (this.checkboxSelected.includes(id)) {
-  //       this.checkboxSelected.splice (indexOf(i) ,1)
-  //     }
-  //   }
-  // }
+  public onSelected(e: any, id: number) {
+    let i = this.checkboxSelected.indexOf(id)
 
 
+    if (!this.checkboxSelected.includes(id)) {
+      this.checkboxSelected.push(id)
+    }
+    else {
+      this.checkboxSelected.splice(i, 1)
+    }
+    // console.log(this.checkboxSelected)
+  }
+
+ 
 
 
 

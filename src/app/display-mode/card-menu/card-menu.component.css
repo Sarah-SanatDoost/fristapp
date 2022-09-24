@@ -98,10 +98,11 @@ display: none;
 }
 .active{
   color: #ffffff;
-
   font-size: 0.8rem;
+  background-color: #a4b0be;
 }
 .bg{
-  background-color: #a4b0be;
+  background-color: #d4e8ff;
+  border: 1px solid #1E90FF !important;
   
 }
