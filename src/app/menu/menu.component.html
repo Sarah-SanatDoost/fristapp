@@ -1,11 +1,31 @@
 <div class="container-fluid p-0">
-  <app-top-header></app-top-header>
+
+  <mat-drawer-container autosize>
+    <mat-drawer mode="over" [(opened)]="sidenav.isOpen">
+    hi
+    </mat-drawer>
+  
+
+    <mat-drawer-content>
+
+      <app-top-header></app-top-header>
 
   <app-header-menu></app-header-menu>
 
   <app-sub-menu></app-sub-menu>
 
   <app-panel></app-panel>
+    </mat-drawer-content>
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+      </button>
+    </div>
+  
+  </mat-drawer-container>
+
+  
+  
   
 <div *ngIf= breakpoints.IsMobileSize>
   <app-card-menu></app-card-menu>

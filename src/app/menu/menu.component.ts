@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BreakpointsService } from '../services/breakpoints/breakpoints.service';
-
+import { SideNavService } from '../side-nav.service';
 
 @Component({
   selector: 'app-menu',
@@ -15,7 +15,12 @@ import { BreakpointsService } from '../services/breakpoints/breakpoints.service'
 // }
 export class MenuComponent implements OnInit {
 
-  constructor(public breakpoints: BreakpointsService) { }
+  showFiller = false;
+
+  constructor(
+    public breakpoints: BreakpointsService,
+    public sidenav: SideNavService,
+    ) { };
 
   ngOnInit(): void {
   }

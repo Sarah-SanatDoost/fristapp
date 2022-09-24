@@ -39,7 +39,7 @@
             <td mat-cell *matCellDef="let element">
                 <div *ngFor="let role of element.roles">
                     <div class="role" [style]="setRoleTitle(role)">
-                        <span [class]="roleStyle">{{role}}</span>
+                        <span class="row" [class]="roleStyle">{{role}}</span>
                     </div>
                 </div>
             </td>
