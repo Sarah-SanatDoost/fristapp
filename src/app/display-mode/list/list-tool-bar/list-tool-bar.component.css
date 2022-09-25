@@ -1,9 +1,10 @@
-.list-tool-bar{
+.list-tool-bar {
     height: 120px;
     background-color: #f1f2f6;
     border-bottom: 3px solid #1E90FF;
     overflow: hidden;
 }
+
 form {
     position: relative;
 }
@@ -19,14 +20,17 @@ form {
 input {
     padding: 6px 35px 6px 0px;
 }
+
 .tool-button {
-    border-bottom: 3px  #1E90FF;
+    border-bottom: 3px #1E90FF;
 }
-.printerbtn{
-    width: 100px ;
-     height: 32px;
-     bottom: 4px;
+
+.printerbtn {
+    width: 100px;
+    height: 32px;
+    bottom: 4px;
 }
+
 .bg-button {
     background-color: white;
     width: 32px;
@@ -40,16 +44,28 @@ input {
     cursor: pointer;
     margin-right: 0.4em;
 }
+
 .mat-flat-button {
     /* bottom: 5px; */
     height: 32px;
     border-radius: 6px;
     margin-right: 0.4em;
 }
-.bg-printer{
-width: 80px;
-height: 32px;
-background-color: white;
-margin-left: 20px;
+
+.bg-printer {
+    width: 80px;
+    height: 32px;
+    background-color: white;
+    margin-left: 20px;
 
 }
+
+.selected {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.custom-select {
+    width: 160px;
+    height: 32px;
+    border: 1px solid #A4B0BE !important};
