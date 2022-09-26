@@ -1,49 +1,50 @@
-<div class="d-flex flex-column w-100 p-0">
-  <app-card-tool-bar (btnClick)="onList()" (allCheckboxSelected)="onChecked($event)"></app-card-tool-bar>
 
-  <div class="container-fluid w-100 d-flex row rtl p-0 m-0">
+  <div class=" container-fluid d-flex flex-column w-100 p-0 rtl">
+    <app-card-tool-bar (btnClick)="onList()" (allCheckboxSelected)="onChecked($event)"></app-card-tool-bar>
 
-    <mat-card *ngFor="let element of elements" class="col-sm-6 col-md-3 w-md-25 border iransans p-2"
-      [class]="checkboxSelectedService.checkboxSelected.includes(element.id)  ? 'bg' : '' ">
-      <div class="d-flex align-items-center">
+    <div class=" card-containet p-0 mx-2 d-flex row  ">
 
-        <div class="col d-flex justify-content-start mb-2">
-          <mat-checkbox size="small" color="primary" [checked]="checked" (change)="onSelected($event , element.id)">
-          </mat-checkbox>
+      <mat-card *ngFor="let element of elements" class="col-sm-6 col-md-4 col-lg-3 w-md-25 border iransans p-2"
+        [class]="checkboxSelectedService.checkboxSelected.includes(element.id)  ? 'bg' : '' ">
+        <div class="d-flex align-items-center mb-2">
+
+          <div class="col d-flex justify-content-start mb-2">
+            <mat-checkbox size="small" color="primary" [checked]="checked" (change)="onSelected($event , element.id)">
+            </mat-checkbox>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <mat-icon>more_vert</mat-icon>
+          </div>
         </div>
-        <div class="col d-flex justify-content-end">
-          <mat-icon>more_vert</mat-icon>
-        </div>
-      </div>
-      <mat-card-title-group class="d-flex ">
-        <img class="col-4 " mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
-        <div class="col-8 d-flex flex-column align-items-start">
-          <div class="d-flex">
-            <mat-card-title>{{element.name}}</mat-card-title>
-            <span class="col-2" [hidden]="element.active">
-              <span class="inactivBg">
-                <span class="active">غیرفعال</span>
+        <mat-card-title-group class="d-flex ">
+          <img class="col-4 " mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+          <div class="col-8 d-flex flex-column align-items-start">
+            <div class="d-flex">
+              <mat-card-title>{{element.name}}</mat-card-title>
+              <span class="col-2" [hidden]="element.active">
+                <span class="inactivBg">
+                  <span class="active">غیرفعال</span>
+                </span>
               </span>
-            </span>
+            </div>
+
+            <mat-card-subtitle class="mb-1">{{element.id}} </mat-card-subtitle>
+            <mat-card-subtitle class="m-0 email">
+              {{element.email}}
+            </mat-card-subtitle>
           </div>
+        </mat-card-title-group>
 
-          <mat-card-subtitle class="mb-1">{{element.id}} </mat-card-subtitle>
-          <mat-card-subtitle class="m-0 email">
-            {{element.email}}
-          </mat-card-subtitle>
-        </div>
-      </mat-card-title-group>
-
-      <div class="d-flex">
-        <div *ngFor="let role of element.roles">
-          <div class="role d-flex px-1 py-2" [style]="setRoleTitle(role)">
-            <span [class]="roleStyle" class="px-2 py-1">{{ role }}</span>
+        <div class="d-flex">
+          <div *ngFor="let role of element.roles">
+            <div  class="role d-flex px-1 py-2" [style]="setRoleTitle(role)">
+              <span [class]="roleStyle" class="px-2 py-1">{{ role }}</span>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="lastActivity px-3 d-flex row justify-content-end">{{element.lastActivity}}</div>
-    </mat-card>
+        <div class="lastActivity px-3 d-flex row justify-content-end">{{element.lastActivity}}</div>
+      </mat-card>
 
-    <!-- [roleTitle]= '{{element.role}}' -->
+      <!-- [roleTitle]= '{{element.role}}' -->
+    </div>
   </div>
-</div>

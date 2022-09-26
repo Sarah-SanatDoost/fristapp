@@ -36,10 +36,10 @@
 
         <ng-container matColumnDef="role">
             <th mat-header-cell *matHeaderCellDef>نقش</th>
-            <td mat-cell *matCellDef="let element">
-                <div *ngFor="let role of element.roles">
-                    <div class="role" [style]="setRoleTitle(role)">
-                        <span class="row" [class]="roleStyle">{{role}}</span>
+            <td  mat-cell *matCellDef="let element">
+                <div style="display:inline-block"  *ngFor="let role of element.roles">
+                    <div class="role mx-1" [style]="setRoleTitle(role)">
+                        <div [class]="roleStyle">{{role}}</div>
                     </div>
                 </div>
             </td>

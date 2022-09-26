@@ -1,3 +1,8 @@
+.card-containet{
+  /* margin-right: 10px;
+  margin-left: 10px; */
+  border-top: 3px solid #1E90FF;
+}
 .mat-card-sm-image {
   border-radius: 5px;
   width: 70px;
@@ -26,9 +31,11 @@
 .card-tool-bar {
   height: 120px;
   background-color: #f1f2f6;
-  border-bottom: 3px solid #1E90FF;
+  /* border-bottom: 3px solid #1E90FF; */
 }
-
+.container-fluid{
+  background-color: #f1f2f6;
+}
 
 /* .mat-checkbox ::shadow{
 display: none;
@@ -126,6 +133,7 @@ display: none;
   height: 24px;
   align-items: center;
   justify-content: center;
+  padding: 5px;
 }
 
 .inactivBg {

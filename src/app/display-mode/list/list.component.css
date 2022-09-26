@@ -43,23 +43,32 @@ margin: 0%;
 .manager {
   color: #baa152;
   background-color: #faf4e1;
+  padding: 5px;
   
 }
 .user {
   color: #5f68fa;
   background-color: #f5f5f5;
+  padding: 5px;
 }
 .accountant {
   color: #27b360;
   background-color: #dff7e9;
+  padding: 5px;
   /* font-size: small; */
   
 }
 .storekeeper{
   color: #775eb5;
   background-color: #f4f0ff;
+  padding: 5px;
 }
 .role{
   font-size: 0.7em;
   font-weight: 600;
+}
+
+::ng-deep.mat-checkbox-inner-container , th ,td{ 
+  margin: 0% !important;
+  padding: 0% !important;
 }

@@ -1,0 +1,72 @@
+.container{
+    width: 368px;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+.header{
+    height: 96px;
+}
+.title{
+    font-size: 24px;
+}
+.close{
+    cursor: pointer;
+}
+.valid{
+    font-size: 14px;
+    font-weight: bold;
+}
+.enter , .text{
+    font-size: 12px;
+}
+.notice{
+    background-color: #f5f7fa;
+    padding: 15px;
+    margin-top: 5px;
+    width: 336px;
+}
+.icon{
+    margin-left: 5px;
+}
+::placeholder{
+    font-size: 12px;
+   padding: 5px;
+}
+.email input{
+    width: 336px;
+    height: 40px;
+   
+}
+.email{
+    padding-top: 30px;
+}
+.mat-flat-button{
+    background-color:#1E90FF ;
+}
+.test{
+    cursor: pointer;
+    width: 88px !important;
+    height: 32px !important;
+    background-color: #1E90FF;
+    border-radius: 5px;
+}
+.bg-submit{
+    /* width: 88px !important;
+    height: 32px !important;
+    background-color: #1E90FF; */
+    /* border-radius: 5px; */
+    cursor: pointer;
+}
+.submit{
+    color: white;
+    font-size: 12px;
+    margin-right: 5px;
+    align-items: center;
+    margin-bottom: 3px;
+}
+.submitbtn{
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}

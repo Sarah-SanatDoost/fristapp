@@ -4,20 +4,24 @@
 
     <div class="d-flex row" style="height: 80px">
         <div class="d-flex row  align-items-center">
-            <div class="col-6 row d-flex">
-                <app-user-search-box></app-user-search-box>
+            <div class="col-6 d-flex align-items-center">
+                <div class="col">
+                    <app-user-search-box></app-user-search-box>
+                </div>
+
+                <div class="col d-flex iransans input">
+
+                    <select class="custom-select border selected" id="inputGroupSelect01">
+                        <option selected>همه نقش ها</option>
+                        <option value="1">مدیر</option>
+                        <option value="2">کاربر</option>
+                        <option value="3">حسابدار</option>
+                        <option value="4">مسئول انبار</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="col-3 d-flex iransans input">
-
-                <select class="custom-select border selected" id="inputGroupSelect01">
-                    <option selected>همه نقش ها</option>
-                    <option value="1">مدیر</option>
-                    <option value="2">کاربر</option>
-                    <option value="3">حسابدار</option>
-                    <option value="4">مسئول انبار</option>
-                </select>
-            </div>
+            
         </div>
     </div>
 
@@ -42,26 +46,9 @@
                 کاربر جدید</button>
         </div>
 
-        <div class="d-flex col justify-content-end ">
-            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                
 
-                <div class="btn-group" role="group">
-                    <button id="btnGroupDrop1" type="button" class="btn dropdown-toggle"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <a class="dropdown-item" href="#">Dropdown link</a>
-                        <a class="dropdown-item" href="#">Dropdown link</a>
-                    </div>
-                </div>
-                <button type="button" class="btn">1</button>
-            </div>
-        </div>
-
-        <!-- <div class="d-flex col justify-content-end">
-            <button mat-icon-button class="printerbtn">
+        <div class="d-flex col justify-content-end">
+            <div mat-icon-button class="printerbtn">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="83"
                     height="35" viewBox="0 0 83 35">
                     <defs>
@@ -87,7 +74,7 @@
                             transform="translate(10.219 3.938)" fill="#1e90ff" stroke="#1e90ff" stroke-width="1" />
                     </g>
                 </svg>
-            </button>
-        </div> -->
+            </div>
+        </div>
     </div>
 </div>
