@@ -28,7 +28,6 @@ export class ListComponent implements OnInit {
   constructor() { }
 
   public setRoleTitle(roleTitle: string) {
-    console.log(roleTitle);
     if (roleTitle === 'مدیر') {
       this.roleStyle = 'manager';
     }
@@ -80,11 +79,6 @@ export class ListComponent implements OnInit {
     }
   // dataSource= ELEMENT_DATA
 
-
-
-  public onChange(){
-    console.log('ssalam')
-  }
   }
 
 

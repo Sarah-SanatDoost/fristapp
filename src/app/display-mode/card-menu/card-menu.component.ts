@@ -3,6 +3,7 @@ import { periodicEelement } from 'src/app/menu/interface/periodicElement';
 import { MatTableDataSource } from '@angular/material/table';
 import { SelectionModel } from '@angular/cdk/collections';
 import { CardCheckboxSelectedService } from 'src/app/services/card-checkbox-selected.service';
+// import { findIndex } from 'rxjs';
 
 
 @Component({
@@ -29,9 +30,10 @@ export class CardMenuComponent implements OnInit {
   ]
 
   roleTitle = '';
-  roleStyle = ''
+  roleStyle = '';
+  topNone = ''
 
-  constructor(public checkboxSelectedService :CardCheckboxSelectedService) { }
+  constructor(public checkboxSelectedService: CardCheckboxSelectedService) { }
 
 
   public onList() {
@@ -58,33 +60,47 @@ export class CardMenuComponent implements OnInit {
   dataSource = new MatTableDataSource<periodicEelement>(this.elements);
   selection = new SelectionModel<periodicEelement>(true, []);
 
-  public onChecked(e: boolean ) {
+  public onChecked(e: boolean) {
     this.checked = e
 
-    if(this.checked ){
-      for(let i=0 ; i<this.elements.length ; i++){
-        this.checkboxSelectedService.checkboxSelected.push(this.elements[i].id)
+
+    if (this.checked) {
+      for (let i = 0; i < this.elements.length; i++) {
+
+        this.checkboxSelectedService.checkboxSelected.push(this.elements[i].id);
+
       }
     }
-    else{
-      this.checkboxSelectedService.checkboxSelected=[]
+    else {
+      this.checkboxSelectedService.checkboxSelected = []
     }
   }
 
-  public onSelected(e: any, id: number) {
+  public onSelected(e: any, id: number, index: number) {
     let i = this.checkboxSelectedService.checkboxSelected.indexOf(id)
 
-
     if (!this.checkboxSelectedService.checkboxSelected.includes(id)) {
-      this.checkboxSelectedService.checkboxSelected.push(id)
+      this.checkboxSelectedService.checkboxSelected.push(id ,index);
+      // this.checkboxSelectedService.checkboxSelected.push(index);
+      console.log(this.checkboxSelectedService.checkboxSelected);
     }
     else {
-      this.checkboxSelectedService.checkboxSelected.splice(i, 1)
+      this.checkboxSelectedService.checkboxSelected.splice(i, 2)
     }
     // console.log(this.checkboxSelected)
   }
+
+  public hideBotderTop(id: number) {
+    let i = this.checkboxSelectedService.checkboxSelected.indexOf(id)
+
+    for (let i = 0; i < this.elements.length; i++) {
+      if (i === 0 || 1 || 2 || 3) {
+        this.topNone = 'hide-border-top'
+      }
+    }
+  }
 }
- 
+
 
 
 
