@@ -80,25 +80,37 @@ export class CardMenuComponent implements OnInit {
     let i = this.checkboxSelectedService.checkboxSelected.indexOf(id)
 
     if (!this.checkboxSelectedService.checkboxSelected.includes(id)) {
-      this.checkboxSelectedService.checkboxSelected.push(id ,index);
-      // this.checkboxSelectedService.checkboxSelected.push(index);
-      console.log(this.checkboxSelectedService.checkboxSelected);
+      this.checkboxSelectedService.checkboxSelected.push(id, index);
+      // console.log(this.checkboxSelectedService.checkboxSelected);
     }
     else {
-      this.checkboxSelectedService.checkboxSelected.splice(i, 2)
+      this.checkboxSelectedService.checkboxSelected.splice(i, 1)
     }
     // console.log(this.checkboxSelected)
   }
 
-  public hideBotderTop(id: number) {
-    let i = this.checkboxSelectedService.checkboxSelected.indexOf(id)
+  row = 4;
 
-    for (let i = 0; i < this.elements.length; i++) {
-      if (i === 0 || 1 || 2 || 3) {
-        this.topNone = 'hide-border-top'
-      }
+  public hideTop (i: number): boolean {
+
+    let sel = this.checkboxSelectedService.checkboxSelected
+
+    if (sel.includes(i) && (i >= 0 && i < this.row)) {
+      return true;
     }
+    return false;
+
+    // let i = this.checkboxSelectedService.checkboxSelected.indexOf(id)
+
+    // for (let i = 0; i < this.elements.length; i++) {
+    //   if (i === 0 || 1 || 2 || 3) {
+    //     this.topNone = 'hide-border-top'
+    //   }
+    // }
   }
+
+
+
 }
 
 
