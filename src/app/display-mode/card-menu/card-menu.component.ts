@@ -100,19 +100,32 @@ export class CardMenuComponent implements OnInit {
     }
     return false;
   }
-
-  public hideLeft(i: number = 0): boolean {
+  
+  public hideLeft(i: number): boolean {
 
     let sel = this.checkboxSelectedService.checkboxSelected
 
-    if (sel.includes(i && i + 1) ) {
+    if ((i % this.row != (this.row - 1))) {
+      if (sel.includes(i) && sel.includes(i + 1)) {
+        return true;
+      }
+    }
+    return false;
 
-      return true;
+  }
+
+
+  public hideRight(i:number): boolean{
+
+    let sel = this.checkboxSelectedService.checkboxSelected
+
+    if ((i % this.row != 0)) {
+      if (sel.includes(i) && sel.includes(i - 1)) {
+        return true;
+      }
     }
     return false;
   }
-
-}
 
 
 
@@ -125,4 +138,4 @@ export class CardMenuComponent implements OnInit {
   //   const numRows = this.dataSource.data.length;
   //   return numSelected === numRows;
   // }
-
+}
