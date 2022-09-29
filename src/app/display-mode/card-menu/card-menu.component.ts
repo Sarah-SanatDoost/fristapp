@@ -66,8 +66,7 @@ export class CardMenuComponent implements OnInit {
 
     if (this.checked) {
       for (let i = 0; i < this.elements.length; i++) {
-
-        this.checkboxSelectedService.checkboxSelected.push(this.elements[i].id);
+        this.checkboxSelectedService.checkboxSelected.push(i);
 
       }
     }
@@ -76,11 +75,11 @@ export class CardMenuComponent implements OnInit {
     }
   }
 
-  public onSelected(e: any, id: number, index: number) {
-    let i = this.checkboxSelectedService.checkboxSelected.indexOf(id)
+  public onSelected(e: any , index: number) {
+    let i = this.checkboxSelectedService.checkboxSelected.indexOf(index)
 
-    if (!this.checkboxSelectedService.checkboxSelected.includes(id)) {
-      this.checkboxSelectedService.checkboxSelected.push(id, index);
+    if (!this.checkboxSelectedService.checkboxSelected.includes(index)) {
+      this.checkboxSelectedService.checkboxSelected.push(index);
       // console.log(this.checkboxSelectedService.checkboxSelected);
     }
     else {
@@ -95,35 +94,47 @@ export class CardMenuComponent implements OnInit {
 
     let sel = this.checkboxSelectedService.checkboxSelected
 
+
     if (sel.includes(i) && (i >= 0 && i < this.row)) {
       return true;
     }
     return false;
+
+
   }
-  
+
   public hideLeft(i: number): boolean {
 
     let sel = this.checkboxSelectedService.checkboxSelected
+    // let index = this.checkboxSelectedService.checkboxSelected.indexOf(i)
 
-    if ((i % this.row != (this.row - 1))) {
-      if (sel.includes(i) && sel.includes(i + 1)) {
-        return true;
+    
+      if ((i % this.row != (this.row - 1))) {
+        if (sel.includes(i) && sel.includes(i + 1)) {
+          return true;
+        }
       }
-    }
+    
+
     return false;
 
   }
 
+  // if (sel.includes(i)){}
+  // else{sel.splice(i,1)}
 
-  public hideRight(i:number): boolean{
+  public hideRight(i: number): boolean {
 
     let sel = this.checkboxSelectedService.checkboxSelected
+
+
 
     if ((i % this.row != 0)) {
       if (sel.includes(i) && sel.includes(i - 1)) {
         return true;
       }
     }
+
     return false;
   }
 
