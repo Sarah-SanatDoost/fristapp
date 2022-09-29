@@ -91,7 +91,7 @@ export class CardMenuComponent implements OnInit {
 
   row = 4;
 
-  public hideTop (i: number): boolean {
+  public hideTop(i: number): boolean {
 
     let sel = this.checkboxSelectedService.checkboxSelected
 
@@ -99,17 +99,18 @@ export class CardMenuComponent implements OnInit {
       return true;
     }
     return false;
-
-    // let i = this.checkboxSelectedService.checkboxSelected.indexOf(id)
-
-    // for (let i = 0; i < this.elements.length; i++) {
-    //   if (i === 0 || 1 || 2 || 3) {
-    //     this.topNone = 'hide-border-top'
-    //   }
-    // }
   }
 
+  public hideLeft(i: number = 0): boolean {
 
+    let sel = this.checkboxSelectedService.checkboxSelected
+
+    if (sel.includes(i && i + 1) ) {
+
+      return true;
+    }
+    return false;
+  }
 
 }
 
