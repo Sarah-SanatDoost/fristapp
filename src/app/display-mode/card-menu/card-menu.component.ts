@@ -144,9 +144,9 @@ export class CardMenuComponent implements OnInit {
 
 
 
-  // public isAllSelected(){
-  //   const numSelected = this.selection.selected.length;
-  //   const numRows = this.dataSource.data.length;
-  //   return numSelected === numRows;
-  // }
+  public isAllSelected(){
+    const numSelected = this.checkboxSelectedService.checkboxSelected.length;
+    const numCards = this.elements.length;
+    return numSelected === numCards;
+  }
 }

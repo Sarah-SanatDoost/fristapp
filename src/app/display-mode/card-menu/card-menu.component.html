@@ -4,7 +4,8 @@
   <div class=" card-containet p-0 mx-2 d-flex row  ">
 
     <mat-card *ngFor="let element of elements; let i=index;"
-      class="col-sm-6 col-md-4 col-lg-3 w-md-25 border iransans p-2" [ngClass]="{
+      class="col-sm-6 col-md-4 col-lg-3 w-md-25 border iransans p-2"
+       [ngClass]="{
         'bg':checkboxSelectedService.checkboxSelected.includes(i), 
         'hide-border-top': hideTop(i),
         'hide-border-left' : hideLeft(i),
@@ -14,7 +15,11 @@
       <div class="d-flex align-items-center mb-2">
 
         <div class="col d-flex justify-content-start mb-2">
-          <mat-checkbox size="small" color="primary" [checked]="checked" (change)="onSelected($event  , i)">
+          <mat-checkbox size="small" color="primary"
+           [checked]="checked"
+            (change)="onSelected($event  , i)"
+           
+            >
           </mat-checkbox>
         </div>
         <div class="col d-flex justify-content-end">

@@ -9,8 +9,13 @@
     <div class="d-flex row tool-button rtl">
         <div class="d-flex col justify-content-start">
             <span class="bg-button ">
-                <mat-checkbox color="primary" (change)="onCheckboxClicked($event)" [checked]="isChecked"
+                <mat-checkbox 
+                color="primary" 
+                (change)="onCheckboxClicked($event)" 
+                [checked]="isChecked"
+                 [indeterminate]="!isAllSelected() && this.checkboxSelectedService.checkboxSelected.length != 0"  
                    ></mat-checkbox>
+                   <!-- [indeterminate]=" notEmpty() && !isAllSelected()"  -->
             </span>
             <span class="bg-button ">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35"
