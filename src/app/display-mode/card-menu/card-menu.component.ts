@@ -27,6 +27,9 @@ export class CardMenuComponent implements OnInit {
     { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', active: false, id: 10259, roles: ['مسئول انبار'], date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
     { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', active: false, id: 10260, roles: ['حسابدار'], date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
     { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', active: false, id: 10261, roles: ['حسابدار'], date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
+    { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', active: false, id: 10262, roles: ['حسابدار'], date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
+    { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', active: false, id: 10263, roles: ['حسابدار'], date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
+    { imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg", name: 'چیستا محمدی', active: false, id: 10264, roles: ['حسابدار'], date: '1400/12/01', email: 'maggi45@gmail.com', lastActivity: 'امروز - 10:23' },
   ]
 
   roleTitle = '';
@@ -120,9 +123,6 @@ export class CardMenuComponent implements OnInit {
 
   }
 
-  // if (sel.includes(i)){}
-  // else{sel.splice(i,1)}
-
   public hideRight(i: number): boolean {
 
     let sel = this.checkboxSelectedService.checkboxSelected
@@ -135,6 +135,16 @@ export class CardMenuComponent implements OnInit {
       }
     }
 
+    return false;
+  }
+
+  public hideBottom(i: number): boolean {
+
+    let sel = this.checkboxSelectedService.checkboxSelected
+
+    if (sel.includes(i) && sel.includes(i+ this.row)) {
+      return true;
+    }
     return false;
   }
 

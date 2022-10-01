@@ -157,3 +157,6 @@ border-top: none !important;
 .hide-border-right{
   border-right: none !important;
 }
+.hide-border-bottom{
+  border-bottom: none !important;
+}
