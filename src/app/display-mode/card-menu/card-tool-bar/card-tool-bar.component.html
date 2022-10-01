@@ -13,9 +13,8 @@
                 color="primary" 
                 (change)="onCheckboxClicked($event)" 
                 [checked]="isChecked"
-                 [indeterminate]="!isAllSelected() && this.checkboxSelectedService.checkboxSelected.length != 0"  
-                   ></mat-checkbox>
-                   <!-- [indeterminate]=" notEmpty() && !isAllSelected()"  -->
+                [indeterminate]="!isAllSelected() && this.checkboxSelectedService.checkboxSelected.length != 0"  
+                 ></mat-checkbox>
             </span>
             <span class="bg-button ">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35"
@@ -125,7 +124,11 @@
     <div class="d-flex align-items-center">
         <div class="col mobilebtn row mb-2">
             <div class="bg-button align-items-center justify-content-center">
-                <mat-checkbox color="primary" (change)="onCheckboxClicked($event)" [checked]="isChecked"
+                <mat-checkbox
+                 color="primary"
+                  (change)="onCheckboxClicked($event)" 
+                  [checked]="isChecked"
+                  [indeterminate]="!isAllSelected() && this.checkboxSelectedService.checkboxSelected.length != 0"
                 ></mat-checkbox>
             </div>
 

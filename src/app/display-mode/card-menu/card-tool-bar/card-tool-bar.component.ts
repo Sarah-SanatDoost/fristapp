@@ -35,7 +35,6 @@ export class CardToolBarComponent implements OnInit {
   @Output() allCheckboxSelected = new EventEmitter();
   @Input() isChecked: boolean = false;
   @Output() btnClick = new EventEmitter()
-  IsNotEmpty: boolean = false;
 
   dataSource = new MatTableDataSource<periodicEelement>(elements);
   selection = new SelectionModel<periodicEelement>(true, []);
@@ -71,33 +70,5 @@ export class CardToolBarComponent implements OnInit {
     }
     return false;
   }
-
- 
-
-  // public someComplete(index: number): boolean {
-  //   let i = this.checkboxSelectedService.checkboxSelected.indexOf(index)
-  //   if (!this.isAllSelected && this.checkboxSelectedService.checkboxSelected.includes(i)) {
-  //     return true;
-  //   }
-  //   return false;
-
-  // }
-
-  // public setAll(completed: boolean) {
-  //   this.allComplete = completed;
-  //   if (this.task.subtasks == null) {
-  //     return;
-  //   }
-  //   this.task.subtasks.forEach(t => (t.completed = completed));
-  // }
-
-
-
- 
-
-//   public notEmpty() {
-
-//  const empty = this.checkboxSelectedService.checkboxSelected.length === 0;
-//   }
 
 }
