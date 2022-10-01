@@ -1,7 +1,7 @@
 .card-containet{
   /* margin-right: 10px;
   margin-left: 10px; */
-  /* border-top: 3px solid #1E90FF; */
+  border-top: 3px solid #1E90FF;
 }
 .mat-card-sm-image {
   border-radius: 5px;
@@ -31,15 +31,10 @@
 .card-tool-bar {
   height: 120px;
   background-color: #f1f2f6;
-  /* border-bottom: 3px solid #1E90FF; */
 }
 .container-fluid{
   background-color: #f1f2f6;
 }
-
-/* .mat-checkbox ::shadow{
-display: none;
-} */
 
 .mat-flat-button {
   bottom: 5px;
@@ -63,7 +58,6 @@ display: none;
 }
 
 ::ng-deep .mat-checkbox-frame {
-  /* border-color: #a4b0be;  */
   border: 1.5px solid #a4b0be;
 }
 
@@ -98,9 +92,6 @@ display: none;
   font-weight: 600;
 }
 
-/* .mat-checkbox {
-  font-size: 1em;
-} */
 /* ============================== */
 .manager {
   color: #baa152;

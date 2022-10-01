@@ -83,12 +83,12 @@ export class CardMenuComponent implements OnInit {
 
     if (!this.checkboxSelectedService.checkboxSelected.includes(index)) {
       this.checkboxSelectedService.checkboxSelected.push(index);
-      // console.log(this.checkboxSelectedService.checkboxSelected);
+    
     }
     else {
       this.checkboxSelectedService.checkboxSelected.splice(i, 1)
     }
-    // console.log(this.checkboxSelected)
+    
   }
 
   row = 4;
@@ -97,37 +97,27 @@ export class CardMenuComponent implements OnInit {
 
     let sel = this.checkboxSelectedService.checkboxSelected
 
-
-    if (sel.includes(i) && (i >= 0 && i < this.row)) {
+    if (sel.includes(i) && ((i >= 0 && i < this.row) || (sel.includes(i - this.row)))) {
       return true;
     }
     return false;
-
-
   }
 
   public hideLeft(i: number): boolean {
 
     let sel = this.checkboxSelectedService.checkboxSelected
-    // let index = this.checkboxSelectedService.checkboxSelected.indexOf(i)
-
-    
+   
       if ((i % this.row != (this.row - 1))) {
         if (sel.includes(i) && sel.includes(i + 1)) {
           return true;
         }
       }
-    
-
     return false;
-
   }
 
   public hideRight(i: number): boolean {
 
     let sel = this.checkboxSelectedService.checkboxSelected
-
-
 
     if ((i % this.row != 0)) {
       if (sel.includes(i) && sel.includes(i - 1)) {
